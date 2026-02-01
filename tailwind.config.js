@@ -13,7 +13,15 @@ export default {
         cursiveFont: ["cursiveFont", "cursive"],
       },
       colors: {
-        yellowPrimary: "#d2ae6d"
+        yellowPrimary: "#d2ae6d",
+        teaGreen: "#7cbb7c",
+        aboutGreen: "#51a8b1",
+        grayBg: "#868686",
+        lightGrayBg: "#dddddd",
+        grayBlue : "#a6b8b8",
+        specialBlue : "#4c9db2",
+        specialOrange : "#b3624d",
+        specialSBrow: "#574748"
       },
       
       
