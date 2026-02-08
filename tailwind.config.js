@@ -21,7 +21,10 @@ export default {
         grayBlue : "#a6b8b8",
         specialBlue : "#4c9db2",
         specialOrange : "#b3624d",
-        specialSBrow: "#574748"
+        specialSBrow: "#574748",
+        spicePink: "#a46080",
+        spiceGreen: "#51a8b1",
+        
       },
       
       

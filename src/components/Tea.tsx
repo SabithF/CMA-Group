@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Footer";
 
 type teaGallryType = {
     src: string,
@@ -122,9 +123,33 @@ const Tea: React.FC = () => {
             </section>
 
 
-            <section className="mt-44">
-                Special
+            <section className="mt-36">
+                <div className="flex">
+                    <img src="/assets/img/Cannister Tin.png" alt="cannister"  className="w-[35%]"/>
+                    <div className="bg-specialBlue w-full flex flex-col items-center justify-center py-10 gap-20">
+                        <h1 className="font-outfit text-[9rem] text-specialOrange"><span className="text-specialSBrow">S</span>pecial</h1>
+                         <p className="text-lg px-24 text-white  "><span className="text-blue-600 font-semibold">Chahai brings you authentic Ceylon tea</span>, sourced from the lush highlands of Sri Lanka. Carefully handpicked by skilled tea pluckers, every leaf is crafted to preserve its natural aroma, flavour, and freshness. Each cup reflects a heritage of quality, care, and tradition.
+                            Chahai brings you authentic Ceylon tea, sourced from the lush highlands of Sri Lanka. Carefully handpicked by skilled tea pluckers, every leaf is crafted to preserve its natural aroma, flavour, and freshness. Each cup reflects a heritage of quality, care, and tradition.
+                        </p>
+                    </div>
+
+                </div>
             </section>
+
+            {/* Loose Tea */}
+            <section className="flex mx-auto">
+                <div className="flex flex-col items-center justify-center">
+                    <h1 className="font-poppins text-[9rem]">Loose Tea</h1>
+                    <p className="text-lg px-24 text-black  "><span className="text-blue-600 font-semibold">Chahai brings you authentic Ceylon tea</span>, sourced from the lush highlands of Sri Lanka. Carefully handpicked by skilled tea pluckers, every leaf is crafted to preserve its natural aroma, flavour, and freshness. Each cup reflects a heritage of quality, care, and tradition.
+                            Chahai brings you authentic Ceylon tea, sourced from the lush highlands of Sri Lanka. Carefully handpicked by skilled tea pluckers, every leaf is crafted to preserve its natural aroma, flavour, and freshness. Each cup reflects a heritage of quality, care, and tradition.
+                    </p>
+                </div>
+                <div className="">
+                    <img src="/assets/img/CHAHAI BAG.png" alt="Black tea" className="w-[3000px] -translate-y-32" />
+                </div>
+            </section>
+
+            <Footer />
 
 
         </section>
