@@ -2,7 +2,7 @@ import './App.css'
 import Home from './components/Home'
 import { Route, Routes } from "react-router-dom";
 import Tea from './components/Tea';
-import Spice from './components/spices';
+import Spice from './components/Spices';
 import Zoom from './components/Zoom';
 
 function App() {
