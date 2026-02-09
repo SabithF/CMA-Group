@@ -7,10 +7,10 @@ type spiceContentType = {
     imgSrc: string,
     imgAlt: string,
 }
-type productImgsType = {
-    imgSrc: string,
-    imgAlt: string,
-}
+// type productImgsType = {
+//     imgSrc: string,
+//     imgAlt: string,
+// }
 
 
 

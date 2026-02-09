@@ -11,6 +11,7 @@ export default {
         messiri: ["El Messiri", "sans-serif"],
         dancing: ["Dancing Script", "cursive"],
         cursiveFont: ["cursiveFont", "cursive"],
+        zurich: ["zurich", "sans-serif"]
       },
       colors: {
         yellowPrimary: "#d2ae6d",
@@ -24,6 +25,9 @@ export default {
         specialSBrow: "#574748",
         spicePink: "#a46080",
         spiceGreen: "#51a8b1",
+        zoomGray: "#42515a",
+        zoomYellow: "#fffae1"
+
         
       },
       

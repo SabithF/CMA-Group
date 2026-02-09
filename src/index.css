@@ -11,3 +11,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: 'zurich';
+    src: url('/assets/fonts/zurich.ttf') format('truetype');
+}
