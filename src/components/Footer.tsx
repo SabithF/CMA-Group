@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm">
               <li><Link to="/about" className="hover:underline">About Us</Link></li>
               <li><Link to="/portfolio" className="hover:underline">Our Brands</Link></li>
-              <li><Link to="/csr" className="hover:underline">CSR</Link></li>
+              {/* <li><Link to="/csr" className="hover:underline">CSR</Link></li> */}
               <li><Link to="/contact" className="hover:underline">Contact</Link></li>
             </ul>
           </div>
@@ -54,9 +54,9 @@ const Footer: React.FC = () => {
               Contact
             </h4>
             <ul className="space-y-3 text-sm text-white/90">
-              <li>📍 Colombo, Sri Lanka</li>
-              <li>📞 +94 11 234 5678</li>
-              <li>✉️ info@yourgroup.com</li>
+              {/* <li>📍 Colombo, Sri Lanka</li> */}
+              <li>📞 +61 478 666 813 | +94 773 065 999 | <br /> +30 694 020 8916</li>
+              <li>✉️ hello@cma.com</li>
             </ul>
           </div>
 

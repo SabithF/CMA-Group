@@ -10,11 +10,11 @@ const Home: React.FC = () => {
         <>
             <Nav />
 
-            <section className="">
+            <section className="w-full h-full">
 
                  {/* main banner */}
                 <div className="">
-                    <img src="/assets/img/Epikurion Grove.png" alt="Epikurion Grove" />
+                    <img src="/assets/img/Epikurion Grove.png" alt="Epikurion Grove"  className="w-[700px] md:w-full"/>
                 </div>
 
                 {/* <BrandsShowcaseSection /> */}

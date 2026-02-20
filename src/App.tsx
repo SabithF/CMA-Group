@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Tea from './components/Tea';
 import Spice from './components/Spices';
 import Zoom from './components/Zoom';
+import CMAGroup from './components/About';
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/about' element={<CMAGroup />} />
 
         <Route path='/tea' element={<Tea />} />
         <Route path='/masa' element={<Spice/>} />

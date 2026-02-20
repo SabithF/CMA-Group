@@ -3,7 +3,9 @@ import React from "react";
 
 const Nav: React.FC = () => {
     return (
-        <nav className="bg-[#FD7D00]">
+        <nav 
+        id="nav"
+        className="bg-[#FD7D00]">
             <div className="flex justify-between 
             items-center  pr-6">
                 <div className="pb-1 ">

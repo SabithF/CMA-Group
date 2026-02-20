@@ -2,17 +2,11 @@ import React from "react";
 import Footer from "./Footer";
 
 type spiceContentType = {
-    title: string,
-    desc: string,
-    imgSrc: string,
-    imgAlt: string,
-}
-// type productImgsType = {
-//     imgSrc: string,
-//     imgAlt: string,
-// }
-
-
+  title: string;
+  desc: string;
+  imgSrc: string;
+  imgAlt: string;
+};
 
 const spiceContent: spiceContentType[] = [
     {
@@ -82,154 +76,173 @@ const spiceContent: spiceContentType[] = [
         imgAlt: "Vanilla",
     },
 ];
-
-
-
-
-
-
 const Spice: React.FC = () => {
-    return (
-        <section>
-            <section className="relative w-full flex flex-col items-center justify-center overflow-hidden ">
-                <img src="/assets/logo/masa Logo.png" alt="Masa Logo"
-                    className="w-28  " />
+  return (
+    <section className="overflow-hidden">
 
-                <div className="flex justify-between w-full">
-                    <img src="/assets/img/spice/masa-home.png" alt="Spice" className="w-[60%]" />
-                    <h1 className="w-full font-urbanist font-semibold  text-4xl flex items-center justify-center">The Natural  Goodness of Ceylon</h1>
+      {/* ================= HERO ================= */}
+      <section className="relative w-full flex flex-col items-center justify-center overflow-hidden">
 
+        <img
+          src="/assets/logo/masa Logo.png"
+          alt="Masa Logo"
+          className="w-24 sm:w-28"
+        />
 
+        <div className="flex flex-col md:flex-row items-center justify-between w-full px-4 md:px-0">
+          
+          <img
+            src="/assets/img/spice/masa-home.png"
+            alt="Spice"
+            className="w-full md:w-[60%]"
+          />
+
+          <h1 className="w-full text-center md:text-left font-urbanist font-semibold text-2xl sm:text-3xl md:text-4xl flex items-center justify-center md:justify-start py-6 md:py-0">
+            The Natural Goodness of Ceylon
+          </h1>
+
+        </div>
+
+        <img
+          src="/assets/img/spice/masa-range.png"
+          alt="Spice range"
+          className="w-full object-contain"
+        />
+
+        <div className="bg-[#a46080] h-3 w-full" />
+      </section>
+
+      {/* ================= ABOUT ================= */}
+      <section className="py-12 max-w-7xl mx-auto px-4 md:px-0">
+        <div className="flex flex-col gap-12">
+
+          {/* Mass Ceylon */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="md:w-1/2">
+              <h2 className="text-2xl md:text-3xl text-spicePink font-urbanist pb-2 font-semibold">
+                Mass Ceylon Spices
+              </h2>
+              <p className="text-base md:text-lg">
+                <span className="text-blue-600 font-semibold">
+                  Masa Ceylon Spices – A Touch of Heat, A Lot of Heritage
+                </span>{" "}
+                Discover the authentic flavours of Sri Lanka with Masa Ceylon Spices...
+              </p>
+            </div>
+
+            <div className="md:w-1/2 flex justify-center">
+              <img
+                src="/assets/img/spice/about-spice.png"
+                alt="Mass Ceylon Spices"
+                className="w-full md:w-[90%]"
+              />
+            </div>
+          </div>
+
+          {/* About Us */}
+          <div>
+            <h2 className="text-2xl md:text-3xl text-spicePink font-urbanist pb-2 font-semibold">
+              About Us
+            </h2>
+            <p className="text-base md:text-lg">
+              <span className="text-blue-600 font-semibold">
+                At Masa Ceylon Spices,
+              </span>{" "}
+              we celebrate Sri Lanka’s rich spice heritage...
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ================= PRODUCTS ================= */}
+      <section className="py-12 relative">
+        <div className="bg-spiceGreen h-3 w-full" />
+
+        <div className="max-w-7xl py-16 mx-auto px-4 md:px-0">
+          <h2 className="text-2xl md:text-3xl text-spiceGreen font-urbanist pb-8 font-semibold">
+            Our Products
+          </h2>
+
+          {spiceContent.map((i, index) => (
+            <div
+              key={index}
+              className="flex flex-col md:flex-row gap-8 md:gap-10 items-center md:items-start py-10 border-b border-gray-200"
+            >
+              <div className="md:w-3/4">
+                <h2 className="text-lg md:text-xl font-urbanist font-semibold">
+                  {i.title}
+                </h2>
+                <p className="mt-3 text-sm md:text-base">
+                  {i.desc}
+                </p>
+              </div>
+
+              <div className="md:w-1/4 flex justify-center">
+                <img
+                  src={i.imgSrc}
+                  alt={i.imgAlt}
+                  className="w-48 sm:w-60 md:w-full object-contain"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= PACKAGING ================= */}
+      <section className="py-12">
+        <div className="bg-gray-500/60 h-3 w-full" />
+
+        <div className="max-w-7xl py-16 mx-auto px-4">
+          <div className="mb-10">
+            <h2 className="text-2xl md:text-3xl font-urbanist font-semibold text-gray-900">
+              Our Packaging Range
+            </h2>
+            <p className="text-gray-600 mt-2 max-w-2xl text-sm md:text-base">
+              A consistent, premium jar format across our Ceylon spice lineup.
+            </p>
+          </div>
+
+          {/* Jar images */}
+          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2">
+            {Array.from({ length: 7 }, (_, index) => {
+              const isRight = index % 2 === 1;
+
+              return (
+                <div
+                  key={index}
+                  className={`${
+                    isRight ? "md:translate-y-20" : ""
+                  }`}
+                >
+                  <div className="p-4 md:p-6">
+                    <img
+                      src={`/assets/img/spice/${index + 1}.png`}
+                      alt={`Spice ${index + 1}`}
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
-                <img src="/assets/img/spice/masa-range.png" alt="Spice range" className="" />
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
-                <div className="bg-[#a46080] h-3 w-full" />
+      {/* ================= GIFT ================= */}
+      <section>
+        <img
+          src="/assets/img/spice/gift-collection.png"
+          alt="gift-collection"
+          className="w-full object-cover"
+        />
+      </section>
 
-            </section>
-
-            {/* Mass ceylon about us */}
-            <section className="py-12 max-w-7xl mx-auto ">
-                <div className="flex flex-col w-full justify-between ">
-                    <div className="flex  items-center justify-between w-full gap-5">
-
-                        <div className="">
-                            <h2 className="text-3xl text-spicePink font-urbanist pb-2 font-semibold">Mass Ceylon Spices</h2>
-                            <p><span className="text-blue-600 font-semibold">Masa Ceylon Spices – A Touch of Heat, A Lot of Heritage</span> Discover the authentic flavours of Sri Lanka with Masa Ceylon Spices. Handpicked, sun-dried, and crafted to bring the natural taste, aroma, and goodness of Ceylon to your kitchen.</p>
-
-                        </div>
-
-                        <div className="flex justify-between items-center w-full text-lg">
-
-                            <img src="/assets/img/spice/about-spice.png" alt="Mass Ceylon Spices" className="w-[90%]" />
-                        </div>
-                    </div>
-
-
-                    <div className="flex  items-center justify-between w-full gap-5">
-
-                        <div className="pb-10">
-                            <h2 className="text-3xl text-spicePink font-urbanist pb-2 font-semibold">About Us</h2>
-                            <div className="flex gap-5">
-                                <p><span className="text-blue-600 font-semibold">At Masa Ceylon Spices, </span> we celebrate Sri Lanka’s rich spice heritage. From the lush highlands to your table, every spice is nurtured by nature, harvested with care, and processed to preserve its purity. Our commitment is simple: authentic taste, natural goodness, and quality you can trust</p>
-                                {/* <p><span className="text-blue-600 font-semibold">Masa Ceylon Spices – A Touch of Heat, A Lot of Heritage</span> Discover the authentic flavours of Sri Lanka with Masa Ceylon Spices. Handpicked, sun-dried, and crafted to bring the natural taste, aroma, and goodness of Ceylon to your kitchen.</p> */}
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-
-            </section>
-
-
-            <section className="py-12 relative  mx-auto ">
-
-                <div className="bg-spiceGreen h-3 w-full" />
-
-                <div className="max-w-7xl py-20 mx-auto flex justify-between">
-                    <div className="">
-                        <h2 className="text-3xl text-spiceGreen font-urbanist pb-2 font-semibold">Our Products</h2>
-
-                        {spiceContent.map((i, index) => (
-                            <div className="flex gap-10"
-                                key={index} >
-
-                                <div className="flex flex-col gap-1 pt-10">
-                                    <h2 className="text-xl font-urbanist font-semibold">
-                                        {i.title}
-                                    </h2>
-                                    <p className="pr-20">
-                                        {i.desc}            </p>
-                                </div>
-                                <img src={i.imgSrc} alt={i.imgAlt} className="w-[25%]" />
-                            </div>
-                        ))}
-
-                    </div>
-
-
-
-                </div>
-            </section>
-
-            <section className="py-12  mx-auto">
-                <div className="bg-gray-500/60 h-3 w-full" />
-
-                <div className="max-w-7xl py-20 mx-auto px-4">
-                    <div className="flex items-end justify-between gap-6 mb-10">
-                        <div>
-                            <h2 className="text-3xl font-urbanist font-semibold text-gray-900">
-                                Our Packaging Range
-                            </h2>
-                            <p className="text-gray-600 mt-2 max-w-2xl">
-                                A consistent, premium jar format across our Ceylon spice lineup.
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Jar images */}
-                    <div className="grid gap-8 sm:grid-cols-2">
-                        {Array.from({ length: 7 }, (_, index) => {
-                            const isRight = index % 2 === 1;
-
-                            return (
-                                <div
-                                    key={index}
-                                    className={`${isRight ? "translate-y-20" : ""
-                                        }`}
-                                >
-                                    <div className="p-6">
-                                        <img
-                                            src={`/assets/img/spice/${index + 1}.png`}
-                                            alt={`Spice ${index + 1}`}
-                                            className="h-full w-full object-contain"
-                                            loading="lazy"
-                                        />
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-
-
-                </div>
-
-            </section>
-
-            <section>
-                <img src="/assets/img/spice/gift-collection.png" alt="gift-collection" />
-            </section>
-
-            <Footer/>
-
-
-
-
-        </section>
-
-
-    )
-}
+      <Footer />
+    </section>
+  );
+};
 
 export default Spice;
