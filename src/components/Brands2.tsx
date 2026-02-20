@@ -1,4 +1,4 @@
-import React from "react";
+
 
 /* ===================== DATA ===================== */
 const tiles = [
